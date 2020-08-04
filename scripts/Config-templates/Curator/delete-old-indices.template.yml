@@ -1,0 +1,21 @@
+---
+actions:
+  1: ~
+  action: delete_indices
+  description: "Delete indices older than 3 days (based on index name), for filebeatprefixed indices. Ignore the error if the filter does not result in an actionable list of indices (ignore_empty_list) and exit cleanly."
+  filters:
+    - filtertype: pattern
+      kind: prefix
+      value: filebeat-*
+    - direction: older
+      filtertype: age
+      source: creation_date
+      timestring: "%Y.%m.%d"
+      unit: days
+      unit_count: 30
+  options:
+    allow_ilm_indices: true
+    continue_if_exception: true
+    disable_action: false
+    ignore_empty_list: false
+    timeout_override: ~

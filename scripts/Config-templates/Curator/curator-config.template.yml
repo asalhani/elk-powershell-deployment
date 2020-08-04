@@ -1,0 +1,16 @@
+---
+blacklist:
+  - elasticsearch
+  - urllib3
+client: ~
+hosts:
+  - ${ELASTICSEARCH_HOST}
+logfile: "${LOG_PATH}"
+logformat: default
+logging: ~
+loglevel: ${LOG_LEVEL}
+master_only: false
+port: ${ELASTICSEARCH_PORT}
+ssl_no_validate: false
+timeout: 30
+use_ssl: false

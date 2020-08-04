@@ -1,0 +1,45 @@
+{
+    "installationFilesFolder": "C:/elk-installation-files",
+    "runRootFolder": "d:/elk",
+    "elasticSearchConfig": {
+        "serviceName":"elasticsearch-service-x64",
+        "folderName": "ElasticSearch",
+        "host":"localhost",
+        "port": 9200
+    },
+    "kibanaConfig": {
+        "serviceName":"Kibana",
+        "folderName": "Kibana",
+        "host": "localhost",
+        "port": 5601,
+        "useIpAddressAsServerHostValue": false
+    },
+    "logstashConfig": {
+        "serviceName":"Logstash",
+        "folderName": "Logstash",
+        "host":"localhost",
+        "restApiPort": 9600,
+        "beatPort": 8888
+    },
+    "fileBeatConfig": {
+        "serviceName":"Filebeat",
+        "folderName": "Filebeat",
+        "inspectionTenantsRootLogPath":"D:\\Inspection\\AdminPortal\\Tenants_logs\\LABTOP\\logs",
+        "adminPortalRootLogPath":"D:\\Inspection\\AdminPortal\\AdminPortal_websiste\\logs"
+    },
+    "curatorConfig":{
+        "serviceName":"Curator",
+        "folderName":"Curator",
+        "logging":{
+            "logLevel":"DEBUG",
+            "logFile":"c:/elk-logs"
+        }
+    },
+    "uninstallElkConfig":{
+        "UninstallElasticsearch":true,
+        "UninstallKibana":true,
+        "UninstallLogstash":true,
+        "UninstallCurator":true,
+        "UninstallFilebeat":true
+    }
+}
